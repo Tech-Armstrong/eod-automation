@@ -1,0 +1,47 @@
+# --- Secrets: never commit (API keys, database password, Cloudflare token) ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node (root package.json, and the web app in frontend/) ---
+node_modules/
+frontend/.next/
+frontend/out/
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# --- App data: personal email content, per-user memory, sign-in records ---
+# markdown copies of chats and notes
+outputs/
+# each user's long-term memory (also stored in the database)
+memories/
+# old sign-in files (*.json.imported)
+data/
+# Holiday lists uploaded by HR in the app (named "YYYYMMDD-HHMMSS <file>"); keep the hand-placed lists tracked
+holidays/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]*
+
+# --- Local databases and logs ---
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# --- Editors and OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
